@@ -2,6 +2,6 @@
 #include "../../header/functions.h"
 #include "../../header/constants.h"
 
-void lru(){
+int lru(){
 
 }
