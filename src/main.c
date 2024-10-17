@@ -2,7 +2,6 @@
 #include "../header/functions.h"
 #include "../header/constants.h"
 #include "../header/structures.h"
-#include <cstdio>
 
 const char docs[] = "";
 
@@ -48,8 +47,6 @@ int main(int argc, char * argv[]) {
     int test = strtol("6A34", NULL, 16);
     printf("%d %X\n", test, test/256);
 
-<<<<<<< HEAD
-=======
     if(arguments->frames <= 0) {
         return 0;
     }
@@ -92,5 +89,5 @@ int main(int argc, char * argv[]) {
     }
 
     fclose(trace_file);
->>>>>>> d4f17f721858ca5cef49b090864d16b8c983b8c8
+
 }
