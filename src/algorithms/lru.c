@@ -76,5 +76,5 @@ int lru(int * address_buffer, int address_buffer_size, int frames){
     printf("Page faults:        %d\n", page_faults);
     printf("Page replacements:  %d\n", page_replacements);
 
-
+    return 0;
 }
