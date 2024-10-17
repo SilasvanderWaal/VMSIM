@@ -4,7 +4,7 @@
 #include "../../header/structures.h"
 
 
-void lru(int * address_buffer, int address_buffer_size, int frames){
+int lru(int * address_buffer, int address_buffer_size, int frames){
 
     struct lru_item page_table[frames];
 

@@ -2,6 +2,8 @@
 #include "../header/functions.h"
 #include "../header/constants.h"
 #include "../header/structures.h"
+#include <string.h>
+
 
 const char docs[] = "";
 
@@ -70,7 +72,7 @@ int main(int argc, char * argv[]) {
     fclose(trace_file);
 
     if(strcmp(arguments->algorithm, "fifo") == 0){
-        fifo(address_array, arguments->frames);
+        fifo(address_array, arguments->frames, lines);
     }else if(strcmp(arguments->algorithm, "lru") == 0){
         lru(address_array, lines, arguments->frames);
     }else if(strcmp(arguments->algorithm, "opt") == 0){
@@ -80,5 +82,6 @@ int main(int argc, char * argv[]) {
     }
 
     free(address_array);
+
     return 0;
 }
