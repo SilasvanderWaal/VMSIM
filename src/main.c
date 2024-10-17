@@ -2,6 +2,8 @@
 #include "../header/functions.h"
 #include "../header/constants.h"
 #include "../header/structures.h"
+#include <string.h>
+
 
 const char docs[] = "";
 
@@ -59,6 +61,7 @@ int main(int argc, char * argv[]) {
     int * address_array = malloc(0);
     char buffer_string[MAX_ADDRESS_CHARACTERS_HEX];
 
+
     while(fgets(buffer_string, MAX_ADDRESS_CHARACTERS_HEX, trace_file)) {
         if (strcmp(buffer_string, "\n") == 0) { break;}
         lines++;
@@ -71,7 +74,7 @@ int main(int argc, char * argv[]) {
     printf("\nRunning simulation with %s...\n\n", arguments->algorithm);
 
     if(strcmp(arguments->algorithm, "fifo") == 0){
-        fifo(address_array, arguments->frames);
+        fifo(address_array, arguments->frames, lines);
     }else if(strcmp(arguments->algorithm, "lru") == 0){
         lru(address_array, lines, arguments->frames);
     }else if(strcmp(arguments->algorithm, "opt") == 0){
@@ -81,5 +84,6 @@ int main(int argc, char * argv[]) {
     }
 
     free(address_array);
+
     return 0;
 }

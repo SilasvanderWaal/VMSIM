@@ -4,7 +4,8 @@
 #include "../../header/structures.h"
 
 
-void lru(int * address_buffer, int address_buffer_size, const int frames){
+
+int lru(int * address_buffer, int address_buffer_size, int frames){
 
     int page_hits = 0, page_faults = 0, page_replacements = 0;
 
