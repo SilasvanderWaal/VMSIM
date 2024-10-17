@@ -6,3 +6,8 @@ struct in_args{
     int frames;
     char * trace_file;
 };
+
+struct lru_item {
+    int address;
+    int unsigned time;
+};
