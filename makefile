@@ -6,7 +6,7 @@ BUILD = build
 SRC = src
 
 CFLAGS = -Wall -g
-LDFLAGS = -lpcap -pthread
+LDFLAGS =
 
 # Get all the source files in the SRC directory and its subdirectories
 SRCFILES = $(wildcard $(SRC)/*.c) $(wildcard $(SRC)/**/*.c)

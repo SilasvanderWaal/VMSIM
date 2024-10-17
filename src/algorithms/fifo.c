@@ -1,14 +1,7 @@
 #include "../../header/libraries.h"
 #include "../../header/functions.h"
 #include "../../header/constants.h"
-#include <cstddef>
-#include <cstdio.h>
-#include <cstdlib.h>
-#include <cstring>
 
-<<<<<<< HEAD
-void fifo(){
-=======
 //Program that reads the pages into
 int fifo(int address_array[], int number_of_frames){
     int page_table[NUMBER_OF_PAGES][2];
@@ -42,5 +35,4 @@ int fifo(int address_array[], int number_of_frames){
     }
 
     return 0;
->>>>>>> d4f17f721858ca5cef49b090864d16b8c983b8c8
 }
