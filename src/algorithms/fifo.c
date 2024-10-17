@@ -3,5 +3,4 @@
 #include "../../header/constants.h"
 
 void fifo(){
-
 }

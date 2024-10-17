@@ -44,17 +44,7 @@ int main(int argc, char * argv[]) {
 
     argp_parse(&main_argp, argc, argv, 0, 0, arguments);
 
-    if(arguments->algorithm == NULL) {
-        return 0;
-    }
+    int test = strtol("6A34", NULL, 16);
+    printf("%d %X\n", test, test/256);
 
-    if(arguments->frames <= 0) {
-        return 0;
-    }
-
-    if(arguments->trace_file == NULL) {
-        return 0;
-    }
-
-    printf("arguments:\n%s\n%d\n%s\n", arguments->algorithm, arguments->frames, arguments->trace_file);
 }
