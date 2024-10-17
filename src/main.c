@@ -2,6 +2,7 @@
 #include "../header/functions.h"
 #include "../header/constants.h"
 #include "../header/structures.h"
+#include <cstdio>
 
 const char docs[] = "";
 
@@ -47,4 +48,49 @@ int main(int argc, char * argv[]) {
     int test = strtol("6A34", NULL, 16);
     printf("%d %X\n", test, test/256);
 
+<<<<<<< HEAD
+=======
+    if(arguments->frames <= 0) {
+        return 0;
+    }
+
+    if(arguments->trace_file == NULL) {
+        return 0;
+    }
+
+    printf("arguments:\n%s\n%d\n%s\n", arguments->algorithm, arguments->frames, arguments->trace_file);
+
+    FILE* trace_file = fopen(arguments->trace_file, "r");
+    int lines = 0;
+
+    //Count lines
+    while(!feof(trace_file)){
+        char ch = fgetc(trace_file);
+        if(ch == "\n"){
+            lines++;
+        }
+    }
+
+    //Allocating memory for all the addresses
+    int address_array[lines];
+    char buffer_string[MAX_ADDRESS_CHARACTERS_HEX];
+
+    //Reading all of the addresses into the array
+    for(size_t i = 0; i < lines; i++){
+        fgets(buffer_string, MAX_ADDRESS_CHARACTERS_HEX, trace_file);
+        address_array[i] = strtol(buffer_string, NULL, 16);
+    }
+
+    if(arguments->algorithm = 'fifo'){
+        fifo(address_array, arguments->frames);
+    }else if(arguments->algorithm = 'lru'){
+        lru(address_array, arguments->frames);
+    }else if(arguments->algorithm = 'optimal'){
+        opt(address_array, arguments->frames);
+    }else{
+        printf("Invalid algorithm");
+    }
+
+    fclose(trace_file);
+>>>>>>> d4f17f721858ca5cef49b090864d16b8c983b8c8
 }

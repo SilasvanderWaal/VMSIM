@@ -2,8 +2,6 @@
 #include "../../header/functions.h"
 #include "../../header/constants.h"
 #include "../../header/structures.h"
-#include <stdlib.h>
-
 
 
 void lru(int * address_buffer, int address_buffer_size, int frames){
