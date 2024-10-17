@@ -7,7 +7,11 @@ struct in_args{
     char * trace_file;
 };
 
-struct lru_item {
-    int address;
-    int unsigned time;
+
+struct lru_page_item {
+    bool valid_bit;
+    // Virtual address is vec index
+    // Physical addresses in a real world scenario
+    // int physical_address_index;
+    unsigned int time;
 };

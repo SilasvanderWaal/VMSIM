@@ -68,6 +68,8 @@ int main(int argc, char * argv[]) {
 
     fclose(trace_file);
 
+    printf("\nRunning simulation with %s...\n\n", arguments->algorithm);
+
     if(strcmp(arguments->algorithm, "fifo") == 0){
         fifo(address_array, arguments->frames);
     }else if(strcmp(arguments->algorithm, "lru") == 0){
