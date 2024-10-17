@@ -2,7 +2,6 @@
 #include "../header/functions.h"
 #include "../header/constants.h"
 #include "../header/structures.h"
-#include <cstdio>
 
 const char docs[] = "";
 
@@ -80,11 +79,11 @@ int main(int argc, char * argv[]) {
         address_array[i] = strtol(buffer_string, NULL, 16);
     }
 
-    if(arguments->algorithm = 'fifo'){
-        fifo(address_array, arguments->frames);
-    }else if(arguments->algorithm = 'lru'){
+    if(arguments->algorithm == "fifo"){
+        fifo(address_array, arguments->frames, lines);
+    }else if(arguments->algorithm == "lru"){
         lru(address_array, arguments->frames);
-    }else if(arguments->algorithm = 'optimal'){
+    }else if(arguments->algorithm == "optimal"){
         opt(address_array, arguments->frames);
     }else{
         printf("Invalid algorithm");
