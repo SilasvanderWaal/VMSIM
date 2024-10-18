@@ -3,5 +3,5 @@
 #include "../../header/constants.h"
 
 int opt(){
-
+    return 0;
 }
