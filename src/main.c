@@ -83,7 +83,7 @@ int main(int argc, char * argv[]) {
     }else if(strcmp(arguments->algorithm, "lru") == 0){
         lru(address_array, lines, arguments->frames);
     }else if(strcmp(arguments->algorithm, "opt") == 0){
-        opt(address_array, arguments->frames);
+        opt(address_array, arguments->frames, lines);
     }else{
         printf("Invalid algorithm\n");
     }
