@@ -66,6 +66,8 @@ int opt(int address_array[], int number_of_frames, int lines){
         memory_accesses++;
     }
 
+    printf("\nSimulation Summary\n\n");
+
     printf("Algorithm:          OPT\n");
     printf("Frames:             %d\n", number_of_frames);
     printf("Memory accesses:    %d\n", memory_accesses);
