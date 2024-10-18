@@ -12,8 +12,6 @@ int fifo(int address_array[], int number_of_frames, int lines){
     int page_faults = 0;
     int page_replacements = 0;
 
-    printf("%d", lines);
-
     for(size_t i = 0; i < NUMBER_OF_PAGES; i++){
         //Setting all the valid-invalid bits to invalid
         page_table[i][1] = 0;
