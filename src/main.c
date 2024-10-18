@@ -45,14 +45,19 @@ int main(int argc, char * argv[]) {
     argp_parse(&main_argp, argc, argv, 0, 0, arguments);
 
     if(arguments->frames <= 0) {
+        printf("Frames less or equal to 0 is not permitted\n");
         return 0;
     }
 
-    if(arguments->trace_file == NULL) {
-        return 0;
-    }
+
 
     FILE* trace_file = fopen(arguments->trace_file, "r");
+
+    if(trace_file == NULL) {
+        printf("Error opening file\n");
+        return 0;
+    }
+
     int lines = 0;
 
     //Allocating memory for all the addresses
